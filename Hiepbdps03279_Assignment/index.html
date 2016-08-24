@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Hiepbdps03279</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="jquerymobile/jquery.mobile.flatui.css" />
+<link rel="stylesheet" href="jquerymobile/jquery.mobile-1.4.5.min.css" />
+<script src="jquerymobile/jquery.js"></script>
+<script src="jquerymobile/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/map.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/slideshow.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+</head>
+<script>
+var myCenter=new google.maps.LatLng(10.790498,106.683228);
+
+function initialize()
+{
+var mapProp = {
+  center:myCenter,
+  zoom:17,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker=new google.maps.Marker({
+  position:myCenter,
+  });
+
+marker.setMap(map);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<style>
+.poly {
+	display: none;
+}
+</style>
+<body>
+
+<!-- TRANG CHỦ -->
+<div data-role="page" id="one"> 
+  
+  <!-- /Menu Ẩn -->
+  <div data-role="panel" id="panel" data-position="left"  data-display="push" data-theme="h" style="background-color:
+   #069">
+    <ul data-role="listview" >
+      <img src="images/logo-fpt.png" style="padding-top:5%; padding-left:5%" width="50%" height="40%">
+      <input type="search" name="password" id="search" value="" placeholder="Tìm kiếm...">
+      <li data-icon="home" > <a href="#one"> Trang chủ </a> </li>
+      <li data-icon="user"> <a href="#six"> Kênh của tôi </a> </li>
+      <li data-icon="star" > <a href="#four"> Giới thiệu </a> </li>
+      <li data-icon="tag" > <a href="#tintuc"> Lịch sử </a> </li>
+      <li data-icon="clock" > <a href="#tintuc"> Xem sau </a> </li>
+      <li data-icon="delete" > <a href="#" data-rel="close"> Thoát </a> </li>
+    </ul>
+  </div>
+  
+  <!-- /Header -->
+  <div data-role="header" > <a data-iconpos="notext" href="#panel" data-role="button" data-icon="bullets" style="padding:2%"> </a>
+    <h5> <img src="images/logo-fpt.png" width="70%" ></h5>
+    <a data-iconpos="notext" data-role="button" data-icon="user" title="Home" style="padding:2%"></a> </div>
+  <div data-role="footer" class="nav-glyphish-example" >
+    <div data-role="navbar" class="nav-glyphish-example" data-theme="a" >
+      <ul >
+        <li><a href="#one" data-theme="d" data-icon="home">Trang chủ</a></li>
+        <li><a href="#five" data-theme="d" data-icon="star">Thịnh Hành</a></li>
+        <li><a href="#three" data-theme="d" data-icon="mail">Liên Hệ</a></li>
+      </ul>
+    </div>
+    <ul data-role="listview" data-inset="true" data-theme="a" data-icon="false">
+      
+      <!-- /Animation Movie -->
+      <li data-role="list-divider">Animation Moives <span class="ui-li-count">20</span> </li>
+      <li> <a href="#two"> <img src="images/anh1.jpg" height="95%">
+        <h2>Finding Dory Trailer (2016)</h2>
+        <p>HiepFptPoly - 8.123.440 views</p>
+        </a> </li>
+      <li> <a href="#two"> <img src="images/anh2.jpg" height="95%">
+        <h2>Zootopia Official Trailer (2016)</h2>
+        <p>HiepFptPoly - 5.214.480 views</p>
+        </a> </li>
+      <li> <a href="#two"> <img src="images/anh3.jpg" height="95%">
+        <h2>The Good Dinosaur (2016)</h2>
+        <p>HiepFptPoly - 3.451.980 views</p>
+        </a> </li>
+      
+      <!-- /Action Movie -->
+      <li data-role="list-divider">Action Movies <span class="ui-li-count">30</span> </li>
+      <li> <a href="#two"> <img src="images/anh4.jpg" height="95%">
+        <h2>Doctor Strange Trailer(2016</h2>
+        <p>Movie Trailers - 17.993.421 views</p>
+        </a> </li>
+      <li> <a href="#two"> <img src="images/anh5.jpg" height="95%">
+        <h2>Legend of the Sword Trailer (2017)</h2>
+        <p>Movie Trailers - 12.0183.4749 views</p>
+        </a> </li>
+      <li> <a href="#two"> <img src="images/anh6.jpg" height="95%">
+        <h2>Kong: Skull Island Trailer (2017)</h2>
+        <p>Movie Trailers - 9.785.564 views</p>
+        </a> </li>
+      
+      <!-- /Fantasy Movie -->
+      <li data-role="list-divider">Fantasy Movies <span class="ui-li-count">26</span> </li>
+      <li> <a href="#two"> <img src="images/anh7.jpg" height="95%">
+        <h2>A Monster Calls Trailer(2016)</h2>
+        <p>Poly Media - 4.895.423 views</p>
+        </a> </li>
+      <li> <a href="#two"> <img src="images/anh8.jpg" height="95%">
+        <h2> Fantastic Beasts Trailer(2017)</h2>
+        <p>Poly Media - 2.784.562 views</p>
+        </a> </li>
+      <li> <a href="#two"> <img src="images/anh9.jpg" height="95%">
+        <h2> Warcraft Official Trailer (2017)</h2>
+        <p>Poly Media - 2.564.850 views</p>
+        </a> </li>
+    </ul>
+    <div data-role="footer">  
+      <h2 style="color:#0FC; ">2016 by Hiepbdps03279</h2>
+    </div>
+  </div>
+</div>
+
+<!-- TRANG CHI TIÊT -->
+
+<div data-role="page" id="two">
+  <div data-role="panel" id="panel" data-position="left"  data-display="push" data-theme="h" style="background-color:
+   #069">
+    <ul data-role="listview" >
+      <img src="images/logo-fpt.png" style="padding-top:5%; padding-left:5%" width="50%" height="40%">
+      <input type="search" name="password" id="search" value="" placeholder="Tìm kiếm...">
+      <li data-icon="home" > <a href="#"> Trang chủ </a> </li>
+      <li data-icon="user"> <a href="#six"> Kênh của tôi </a> </li>
+      <li data-icon="star" > <a href="#four"> Giới thiệu </a> </li>
+      <li data-icon="tag" > <a href="#tintuc"> Lịch sử </a> </li>
+      <li data-icon="clock" > <a href="#tintuc"> Xem sau </a> </li>
+      <li data-icon="delete" > <a href="#" data-rel="close"> Thoát </a> </li>
+    </ul>
+  </div>
+  <div data-role="header" > <a data-iconpos="notext" href="#panel" data-role="button" data-icon="bullets" style="padding:2%"> </a>
+    <h5> <img src="images/logo-fpt.png" width="70%" ></h5>
+    <a data-iconpos="notext" data-role="button" data-icon="user" title="Home" style="padding:2%"></a> </div>
+  <div data-role="footer" class="nav-glyphish-example" >
+    <div data-role="navbar" class="nav-glyphish-example" data-theme="a" >
+      <ul >
+        <li><a href="#one" data-theme="d" data-icon="home">Trang chủ</a></li>
+        <li><a href="#five" data-theme="d" data-icon="star">Thịnh Hành</a></li>
+        <li><a href="#three" data-theme="d" data-icon="mail">Liên Hệ</a></li>
+      </ul>
+    </div>
+    <video width="100%" height="100%" controls>
+      <source src="images/EXCLUSIVE- 'Finding Dory' Trailer.mp4" type="video/mp4">
+    </video>
+    <p style="font-size:14px; margin-left:3%"> Finding Dory Official Trailer(2016)</p>
+    <table width="100%">
+      
+        <th width="25%"> <img src="images/1.png" width="100%"> </th>
+        <td width="6%"></td>
+        <td width="6%"><img src="images/like.png" width="100%"></td>
+        <td width="10%" style="font-size:9px">2.095.427</td>
+        <td width="6%" style="padding-top:3%"><img src="images/unlike.png" width="100%"></td>
+        <td width="10%" style="font-size:9px">45.683</td>
+    </table>
+    <p style="font-size:11px; font-family:Arial; margin-left:3%;margin-right:3%; color:#0CC; text-align: justify;">Đi Tìm Dory - Finding Dory câu chuyện nói về sáu tháng trước khi tìm được cá con Nemo và giờ đây Dory đã có một cuộc sống bình thản giữa những chú cá sọc cam trắng, sau một chuyến phiêu lưu đi dã ngoại xem đàn cá đuối Manta di cư về nhà thì Dory lại nảy sinh những câu hỏi về gia đình và quá khứ của bản thân và sau đó có những giấc mơ kỳ lạ, trước đó đã có một cô cá nói trước rồi quên ngay sau đó nhưng Dory khẳng định một điều bản thân mình đã tìm được một phần ký ức qua giấc mơ vừa rồi, và Dory một lần nữa đi tìm cha mẹ và quê hương của mình.</p>
+    <img src="images/finding-dory.0.jpg" width="94%" style="margin-left:3%"> </br>
+    <ul data-role="listview" data-inset="true" data-theme="a" data-icon="false">
+      <li data-role="list-divider">Video tương tự <span class="ui-li-count">20</span> </li>
+      <li> <a href="#"> <img src="images/anh10.jpg" height="95%">
+        <h2>Singer Official Trailer(2016)</h2>
+        <p>HiepFptPoly - 5.214.480 views</p>
+        </a> </li>
+      <li> <a href="#"> <img src="images/anh2.jpg" height="95%">
+        <h2>Zootopia Official Trailer(2016)</h2>
+        <p>HiepFptPoly - 5.214.480 views</p>
+        </a> </li>
+      <li> <a href="#"> <img src="images/anh11.jpg" height="95%">
+        <h2>Kubo and the Strings Official (2016)</h2>
+        <p>HiepFptPoly - 7.451.980 views</p>
+        </a> </li>
+      <li> <a href="#"> <img src="images/anh3.jpg" height="95%">
+        <h2>The Good Dinosaur Trailer(2016)</h2>
+        <p>HiepFptPoly - 3.451.980 views</p>
+        </a> </li>
+      <li> <a href="#"> <img src="images/anh12.jpg" height="95%">
+        <h2>Ice Age 5: Collision Course Buck (2016)</h2>
+        <p>HiepFptPoly -3.451.980 views</p>
+        </a> </li>
+      <div data-role="footer" data-theme="a">  
+        <h2 style="color:#0FC">2016 by Hiepbdps03279</h2>
+      </div>
+    </ul>
+  </div>
+</div>
+
+<!-- TRANG LIÊN HỆ -->
+<div data-role="page" id="three">
+  <div data-role="panel" id="panel" data-position="left"  data-display="push" data-theme="h" style="background-color:
+   #069">
+    <ul data-role="listview" >
+      <img src="images/logo-fpt.png" style="padding-top:5%; padding-left:5%" width="50%" height="40%">
+      <input type="search" name="password" id="search" value="" placeholder="Tìm kiếm...">
+      <li data-icon="home" > <a href="#one"> Trang chủ </a> </li>
+      <li data-icon="user"> <a href="#six"> Kênh của tôi </a> </li>
+      <li data-icon="star" > <a href="#four"> Giới thiệu </a> </li>
+      <li data-icon="tag" > <a href="#tintuc"> Lịch sử </a> </li>
+      <li data-icon="clock" > <a href="#tintuc"> Xem sau </a> </li>
+      <li data-icon="delete" > <a href="#" data-rel="close"> Thoát </a> </li>
+    </ul>
+  </div>
+  <div data-role="header" > <a data-iconpos="notext" href="#panel" data-role="button" data-icon="bullets" style="padding:2%"> </a>
+    <h5> <img src="images/logo-fpt.png" width="70%" ></h5>
+    <a data-iconpos="notext" data-role="button" data-icon="user" title="Home" style="padding:2%"></a> </div>
+  <div data-role="footer" class="nav-glyphish-example" >
+    <div data-role="navbar" class="nav-glyphish-example" data-theme="a" >
+      <ul >
+        <li><a href="#one" data-theme="d" data-icon="home">Trang chủ</a></li>
+        <li><a href="#five" data-theme="d" data-icon="star">Thịnh Hành</a></li>
+        <li><a href="#three" data-theme="d" data-icon="mail">Liên Hệ</a></li>
+      </ul>
+    </div>
+    <div id="googleMap" style="width:100%;height:200px;"></div>
+    <form name='contact' style="margin-left:3% ">
+      <table width="100%">
+        <tr>
+          <td >Họ Tên:</td>
+          <td width="70%"><input type="text" name="txt_name"/>
+            <div id="name" style="color:red;"></div></td>
+        </tr>
+        <tr>
+          <td >Email:</td>
+          <td width="70%"><input type="text" name="txt_email"/>
+            <div id="email" style="color:red;"></div></td>
+        </tr>
+        <tr>
+          <td >Điện thoại: </td>
+          <td width="70%"><input type="text" name="txt_phone"/>
+            <div id="phone" style="color:red;"></div></td>
+        </tr>
+        <tr>
+          <td >Nội dung :</td>
+          <td width="70%"><textarea type="text" name="txt_content" rows="20"></textarea>
+            <div id="content" style="color:red;"></div></td>
+        </tr>
+        <tr >
+        <td></td>
+          <td width="25%"><a href="#" onClick="return check();" data-role="button" style="background-color:#096">Gửi liên hệ </a>&nbsp; <input type="reset" value="Làm lại" style="background-color:#3F0"></td>
+        </tr>
+      </table>
+    </form>
+    <div data-role="footer" style="border-top:
+ 3px solid white">  
+      <h2 style="color:#0FC; ">2016 by Hiepbdps03279</h2>
+    </div>
+  </div>
+</div>
+
+<!-- TRANG GIỚI THIỆU -->
+<div data-role="page" id="four">
+  <div data-role="panel" id="panel" data-position="left"  data-display="push" data-theme="h" style="background-color:
+   #069">
+    <ul data-role="listview" >
+      <img src="images/logo-fpt.png" style="padding-top:5%; padding-left:5%" width="50%" height="40%">
+      <input type="search" name="password" id="search" value="" placeholder="Tìm kiếm...">
+      <li data-icon="home" > <a href="#one"> Trang chủ </a> </li>
+      <li data-icon="user"> <a href="#six"> Kênh của tôi </a> </li>
+      <li data-icon="star" > <a href="#four"> Giới thiệu </a> </li>
+      <li data-icon="tag" > <a href="#tintuc"> Lịch Sử </a> </li>
+      <li data-icon="clock" > <a href="#tintuc"> Xem sau </a> </li>
+      <li data-icon="delete" > <a href="#" data-rel="close"> Thoát </a> </li>
+    </ul>
+  </div>
+  <div data-role="header" > <a data-iconpos="notext" href="#panel" data-role="button" data-icon="bullets" style="padding:2%"> </a>
+    <h5> <img src="images/logo-fpt.png" width="70%" ></h5>
+    <a data-iconpos="notext" data-role="button" data-icon="user" title="Home" style="padding:2%"></a> </div>
+  <div data-role="footer" class="nav-glyphish-example" >
+    <div data-role="navbar" class="nav-glyphish-example" data-theme="a" >
+      <ul >
+        <li><a href="#one" data-theme="d" data-icon="home">Trang chủ</a></li>
+        <li><a href="#five" data-theme="d" data-icon="star">Thịnh Hành</a></li>
+        <li><a href="#three" data-theme="d" data-icon="mail">Liên Hệ</a></li>
+      </ul>
+    </div>
+    <div> <img class="poly" src="images/image1.jpg"  width="100%" > <img class="poly" src="images/image2.jpg"  width="100%" > <img class="poly" src="images/image3.jpg"  width="100%" > </div>
+    <p style="font-size:14px; font-family:Arial; margin-left:3%;margin-right:3%; color:#0FC; text-align: justify;">HiepFptMovie cung cấp dịch vụ xem video online, bao gồm những chương trình chọn lọc với nhiều thể loại TV Show, phim, giáo dục, âm nhạc, clip ngắn và những nội dung khác (gọi chung là "Nội dung"). Dịch vụ video của chúng tôi, nội dung, hệ thống streaming, Video Player và những tính năng, công cụ, ứng dụng khác hoặc những dịch vụ đi kèm phát sinh trong quá trình phát triển và nâng cấp dịch vụ trong tương lai gọi chung là "Dịch vụ HiepFptMovie".</p>
+    <script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("poly");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000); // Change image every 2 seconds
+}
+</script>
+    <div data-role="footer" style="border-top:
+ 3px solid white">  
+      <h2 style="color:#0FC; ">2016 by Hiepbdps03279</h2>
+    </div>
+  </div>
+</div>
+
+<!-- TRANG THỊNH HÀNH -->
+<div data-role="page" id="five">
+  <div data-role="panel" id="panel" data-position="left"  data-display="push" data-theme="h" style="background-color:
+   #069">
+    <ul data-role="listview" >
+      <img src="images/logo-fpt.png" style="padding-top:5%; padding-left:5%" width="50%" height="40%">
+      <input type="search" name="password" id="search" value="" placeholder="Tìm kiếm...">
+      <li data-icon="home" > <a href="#one"> Trang chủ </a> </li>
+      <li data-icon="user"> <a href="#six"> Kênh của tôi </a> </li>
+      <li data-icon="star" > <a href="#four"> Giới thiệu </a> </li>
+      <li data-icon="tag" > <a href="#tintuc"> Lịch Sử </a> </li>
+      <li data-icon="clock" > <a href="#tintuc"> Xem sau </a> </li>
+      <li data-icon="delete" > <a href="#" data-rel="close"> Thoát </a> </li>
+    </ul>
+  </div>
+  <div data-role="header" > <a data-iconpos="notext" href="#panel" data-role="button" data-icon="bullets" style="padding:2%"> </a>
+    <h5> <img src="images/logo-fpt.png" width="70%" ></h5>
+    <a data-iconpos="notext" data-role="button" data-icon="user" title="Home" style="padding:2%"></a> </div>
+  <div data-role="footer" class="nav-glyphish-example" >
+    <div data-role="navbar" class="nav-glyphish-example" data-theme="a" >
+      <ul >
+        <li><a href="#one" data-theme="d" data-icon="home">Trang chủ</a></li>
+        <li><a href="#five" data-theme="d" data-icon="star">Thịnh Hành</a></li>
+        <li><a href="#three" data-theme="d" data-icon="mail">Liên Hệ</a></li>
+      </ul>
+    </div>
+    <div data-role="footer" style="border-top:
+ 3px solid white">  
+      <h2 style="color:#0FC; ">2016 by Hiepbdps03279</h2>
+    </div>
+  </div>
+</div>
+<div data-role="page" id="five">
+  <div data-role="panel" id="panel" data-position="left"  data-display="push" data-theme="h" style="background-color:
+   #069">
+    <ul data-role="listview" >
+      <img src="images/logo-fpt.png" style="padding-top:5%; padding-left:5%" width="50%" height="40%">
+      <input type="search" name="password" id="search" value="" placeholder="Tìm kiếm...">
+      <li data-icon="home" > <a href="#one"> Trang chủ </a> </li>
+      <li data-icon="user"> <a href="#six"> Kênh của tôi </a> </li>
+      <li data-icon="star" > <a href="#four"> Giới thiệu </a> </li>
+      <li data-icon="tag" > <a href="#tintuc"> Lịch Sử </a> </li>
+      <li data-icon="clock" > <a href="#tintuc"> Xem sau </a> </li>
+      <li data-icon="delete" > <a href="#" data-rel="close"> Thoát </a> </li>
+    </ul>
+  </div>
+  <div data-role="header" > <a data-iconpos="notext" href="#panel" data-role="button" data-icon="bullets" style="padding:2%"> </a>
+    <h5> <img src="images/logo-fpt.png" width="70%" ></h5>
+    <a data-iconpos="notext" data-role="button" data-icon="search" title="Home" style="padding:2%"></a> </div>
+  <div data-role="footer" class="nav-glyphish-example" >
+    <div data-role="navbar" class="nav-glyphish-example" data-theme="a" >
+      <ul >
+        <li><a href="#one" data-theme="d" data-icon="home">Trang chủ</a></li>
+        <li><a href="#five" data-theme="d" data-icon="star">Thịnh Hành</a></li>
+        <li><a href="#three" data-theme="d" data-icon="mail">Liên Hệ</a></li>
+      </ul>
+    </div>
+    <table width="100%">
+      
+        <th width="50%"> <p style="font-size:14px">Chọn thể loại phim </p>
+        </th>
+        <td width="50%"><select name="select-native-6" id="select-native-6" data-mini="true">
+            <option value="medium">Phim Hành Động</option>
+            <option value="medium">Phim Hoạt Hình</option>
+            <option value="large">Phim Phiêu Lưu</option>
+          </select></td>
+    </table>
+    <ul data-role="listview" data-inset="true" data-theme="a" data-icon="false">
+      <li> <a href="#two"> <img src="images/anh1.jpg" height="95%">
+        <h2>Finding Dory Trailer (2016)</h2>
+        <p>8.123.440 views</p>
+        </a> </li>
+      <li> <a href="#two"> <img src="images/anh7.jpg" height="95%">
+        <h2>A Monster Calls Trailer(2016)</h2>
+        <p>4.895.423 views</p>
+        </a> </li>
+      <li> <a href="#two"> <img src="images/anh8.jpg" height="95%">
+        <h2>Fantastic Beasts Trailer(2017)</h2>
+        <p>2.784.562 views</p>
+        </a> </li>
+      <li> <a href="#two"> <img src="images/anh9.jpg" height="95%">
+        <h2>Warcraft Official Trailer (2017)</h2>
+        <p>2.564.850 views</p>
+        </a> </li>
+      <li> <a href="#two"> <img src="images/anh5.jpg" height="95%">
+        <h2>Legend of the Sword Trailer (2017)</h2>
+        <p>12.0183.4749 views</p>
+        </a> </li>
+      <li> <a href="#two"> <img src="images/anh6.jpg" height="95%">
+        <h2>Kong: Skull Island Trailer (2017)</h2>
+        <p>9.785.564 views</p>
+        </a> </li>
+    </ul>
+    <div data-role="footer" style="border-top:3px solid white">  
+      <h2 style="color:#0FC; ">2016 by Hiepbdps03279</h2>
+    </div>
+  </div>
+</div>
+
+<!-- TRANG KÊNH CỦA TÔI -->
+<div data-role="page" id="six">
+  <div data-role="panel" id="panel" data-position="left"  data-display="push" data-theme="h" style="background-color:
+   #069">
+    <ul data-role="listview" >
+      <img src="images/logo-fpt.png" style="padding-top:5%; padding-left:5%" width="50%" height="40%">
+      <input type="search" name="password" id="search" value="" placeholder="Tìm kiếm...">
+      <li data-icon="home" > <a href="#one"> Trang chủ </a> </li>
+      <li data-icon="user"> <a href="#six"> Kênh của tôi </a> </li>
+      <li data-icon="star" > <a href="#four"> Giới thiệu </a> </li>
+      <li data-icon="tag" > <a href="#tintuc"> Lịch Sử </a> </li>
+      <li data-icon="clock" > <a href="#tintuc"> Xem sau </a> </li>
+      <li data-icon="delete" > <a href="#" data-rel="close"> Thoát </a> </li>
+    </ul>
+  </div>
+  <div data-role="header" > <a data-iconpos="notext" href="#panel" data-role="button" data-icon="bullets" style="padding:2%"> </a>
+    <h5> <img src="images/logo-fpt.png" width="70%" ></h5>
+    <a data-iconpos="notext" data-role="button" data-icon="user" title="Home" style="padding:2%"></a> </div>
+  <div data-role="footer" class="nav-glyphish-example" >
+    <div data-role="navbar" class="nav-glyphish-example" data-theme="a" >
+      <ul >
+        <li><a href="#one" data-theme="d" data-icon="home">Trang chủ</a></li>
+        <li><a href="#five" data-theme="d" data-icon="star">Thịnh Hành</a></li>
+        <li><a href="#three" data-theme="d" data-icon="mail">Liên Hệ</a></li>
+      </ul>
+    </div>
+    <ul data-role="listview" data-inset="true" data-theme="a" data-icon="false">
+      
+      <!-- /Animation Movie -->
+      <li data-role="list-divider">Kênh của tôi <span class="ui-li-count">14</span> </li>
+    </ul>
+    <table width="100%">
+      <tr>
+        <th width="25%"> <img src="images/sub1.jpg" width="100%"> </th >
+        <td width="20%"><p style="font-size:15px; font:Arial; color:#F60">PewDiePie</p></td>
+        <td width="30%"><p style="font-size:15px; font:Arial"> Đã Đăng Ký</p></td>
+        <td width="10%"><img src="images/tick.png" width="100%"></td>
+      </tr>
+      <tr>
+        <th width="25%"> <img src="images/sub5.jpg" width="100%"> </th >
+        <td width="20%"><p style="font-size:15px; font:Arial; color:#F60"> MaxSounds</p></td>
+        <td width="30%"><p style="font-size:15px; font:Arial"> Đã Đăng Ký</p></td>
+        <td width="10%"><img src="images/tick.png" width="100%"></td>
+      </tr>
+      <tr>
+        <th width="25%"> <img src="images/sub3.jpg" width="100%"> </th >
+        <td width="20%"><p style="font-size:15px; font:Arial; color:#F60">Fpt Poly</p></td>
+        <td width="30%"><p style="font-size:15px; font:Arial"> Đã Đăng Ký</p></td>
+        <td width="10%"><img src="images/tick.png" width="100%"></td>
+      </tr>
+      <tr>
+        <th width="25%"> <img src="images/sub6.jpg" width="100%"> </th >
+        <td width="20%"><p style="font-size:15px; font:Arial; color:#F60">Vinh Vật Vờ</p></td>
+        <td width="30%"><p style="font-size:15px; font:Arial"> Đã Đăng Ký</p></td>
+        <td width="10%"><img src="images/tick.png" width="100%"></td>
+      </tr>
+      <tr>
+        <th width="25%"> <img src="images/aub4.jpg" width="100%"> </th >
+        <td width="20%"><p style="font-size:15px; font:Arial; color:#F60">Relax Song</p></td>
+        <td width="30%"><p style="font-size:15px; font:Arial"> Đã Đăng Ký</p></td>
+        <td width="10%"><img src="images/tick.png" width="100%"></td>
+      </tr>
+      <tr>
+        <th width="25%"> <img src="images/sub2.jpg" width="100%"> </th >
+        <td width="20%"><p style="font-size:15px; font:Arial; color:#F60">Zing TV</p></td>
+        <td width="30%"><p style="font-size:15px; font:Arial"> Đã Đăng Ký</p></td>
+        <td width="10%"><img src="images/tick.png" width="100%"></td>
+      </tr>
+    </table>
+    <div data-role="footer" style="border-top:3px solid white">  
+      <h2 style="color:#0FC; ">2016 by Hiepbdps03279</h2>
+    </div>
+  </div>
+</div>
+</body>
+</html>
